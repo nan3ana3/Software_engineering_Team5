@@ -6,7 +6,7 @@
   <meta name="viewport" content="initial-scale=1, width=device-width" />
 
   <link rel="stylesheet" href="../static/css/global.css" />
-  <link rel="stylesheet" href="../static/css/my-post.css" />
+  <link rel="stylesheet" href="../static/css/upload-post.css" />
   <script type="text/javascript" src="/static/js/navigation.js"></script>
 
   <style>
@@ -35,46 +35,66 @@
     }
   </style>
 </head>
+
 <body>
-  <div class="mypost">
-      {% include 'navigation.html' %}
-      <section class="mypost-inner">
-          <section class="profile-content-parent">
-              <div class="profile-content1">
-                  <div class="profile-information">
-                      <div class="ellipse-container">
-                          <div class="frame-child26"></div>
-                          <div class="frame-wrapper20">
-                              <div class="nickname-details-parent">
-                                  <div class="nickname-details">
-                                      <h3 class="user6">{{ photo.uploader_id }}</h3> <!-- 업로더 닉네임 혹은 ID 출력 -->
-                                  </div>
-                                  <input class="input1" placeholder="한줄소개~" type="text" /> <!-- 한 줄 소개 입력창 -->
-                              </div>
-                          </div>
-                      </div>
-                      <div class="edit-profile1">
-                          <img class="icon3" loading="lazy" alt="Edit Profile" src="../static/public/2@2x.png" id="image" />
-                      </div>
-                  </div>
+  <div class="uploadpost">
+    {% include 'navigation.html' %}
+    <section class="uploadpost-inner">
+      <div class="content-layout-parent">
+        <div class="content-layout">
+          <div class="wrapper1">
+            <h2 class="h21">나의 추억을 사진과 설명으로 남겨요</h2>
+          </div>
+          <div class="upload-area">
+            <div class="upload-fields">
+              <div class="image-upload">
+                <img id="uploaded-image-preview" class="image-upload-child" loading="lazy" alt="" src="./public/group-2129.svg" />
+
+                <label for="image-upload-input" class="add-image-button">
+                  <div class="add-image-placeholder"></div>
+                  <div class="div23">이미지 추가하기</div>
+                  <input id="image-upload-input" name="image" type="file" accept="image/*" style="display: none;">
+                </label>
+                
               </div>
-              <div class="user-information1">
-                  <div class="div29">
-                      {% for keyword in photo.keywords %}
-                      <img class="child" loading="lazy" alt="Keyword" src="../static/public/group-21292.svg" />
-                      {% endfor %}
-                  </div>
-                  <div class="div30">
-                      <div class="description-background">{{ photo.description }}</div> <!-- 사진 설명 출력 -->
-                      <div class="div31">사진 설명</div>
-                  </div>
-              </div>
-          </section>
-      </section>
+              <img class="upload-fields-child" loading="lazy" alt="" src="./public/group-2187.svg" />
+
+              <img class="upload-fields-item" loading="lazy" alt="" src="./public/group-2129.svg" />
+
+              <img class="upload-fields-inner" loading="lazy" alt="" src="./public/group-2187.svg" />
+            </div>
+            <div class="description-input-parent">
+              <textarea id="description-input" name="description" class="description-input" placeholder="여기에 상세 설명을 입력하세요..."></textarea>
+            </div>
+            <div class="keywords-input-parent">
+              <input id="keywords-input" name="keywords" class="keywords-input" placeholder="키워드 입력 (쉼표로 구분)">
+            </div>
+          </div>
+        </div>
+        <section class="wrapper2">
+          <button class="button4" id="button">
+            <div class="div25">업데이트</div>
+          </button>
+        </section>
+      </div>
+    </section>
   </div>
 
-
   <script>
+    var fileInput = document.getElementById("image-upload-input");
+    var imagePreview = document.getElementById("uploaded-image-preview");
+    
+    fileInput.addEventListener("change", function () {
+      var file = fileInput.files[0];
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          imagePreview.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
     var button = document.getElementById("button");
     if (button) {
       button.addEventListener("click", function (e) {
@@ -85,37 +105,32 @@
         var file = fileInput.files[0];
         var keywords = document.getElementById("keywords-input").value;
 
-        if (!file) {
-          alert("이미지를 선택하세요.");
-          return;
-        }
-
         var formData = new FormData();
         formData.append("description", description);
-        formData.append("image", file);
+        if (file) {
+          formData.append("image", file);
+        }
         formData.append("keywords", keywords);
-
+        formData.append("photo_id", window.location.href.split("id=")[1]);
         console.log(formData); // FormData 확인
 
-        fetch("/photos/upload", {
+        fetch("/photos/update", {
           method: "POST",
           body: formData,
-          // headers 설정 제거 (multipart/form-data로 자동 설정됨)
         })
-          .then(function (response) {
-            if (response.ok) {
-              alert("업로드 성공");
-              window.location.href = "/";
-            } else {
-              alert("업로드 실패");
-            }
-          })
-          .catch(function (error) {
-            console.error("Error:", error);
-          });
+        .then(function (response) {
+          if (response.ok) {
+            alert("업로드 성공");
+            window.location.href = "/";
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
       });
     }
 
   </script>
 </body>
+
 </html>
