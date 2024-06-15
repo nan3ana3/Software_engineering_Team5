@@ -23,7 +23,12 @@ class User:
             return user
         return None
 
-
+    @staticmethod
+    def get_username_by_userid(userid):
+        user_collection = app.mongo['users']
+        user = user_collection.find_one({"userid": userid})
+        return user['username']
+        
     @staticmethod
     def find_by_userid(userid):
         user_collection = app.mongo['users']
@@ -45,11 +50,6 @@ class User:
         photo_collection = app.mongo['photos']
         photos = list(photo_collection.find({}))
         return users, photos
-    
-    @staticmethod
-    def find_by_userid(userid):
-        user_collection = app.mongo['users']
-        return user_collection.find_one({"userid": userid})
     
     @staticmethod
     def find_by_username(username):
