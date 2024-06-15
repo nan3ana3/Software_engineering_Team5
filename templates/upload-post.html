@@ -48,29 +48,28 @@
           <div class="upload-area">
             <div class="upload-fields">
               <div class="image-upload">
-                <img id="uploaded-image-preview" class="image-upload-child" loading="lazy" alt="" src="./public/group-2129.svg" />
+                <img id="uploaded-image-preview" class="image-upload-child" loading="lazy" alt=""
+                  src="/static/public/group-2129.svg" />
 
                 <label for="image-upload-input" class="add-image-button">
                   <div class="add-image-placeholder"></div>
                   <div class="div23">이미지 추가하기</div>
                   <input id="image-upload-input" name="image" type="file" accept="image/*" style="display: none;">
                 </label>
-                
+
               </div>
-              <img class="upload-fields-child" loading="lazy" alt="" src="./public/group-2187.svg" />
+              <img class="upload-fields-child" loading="lazy" alt="" src="/static/public/group-2187.svg" />
 
-              <img class="upload-fields-item" loading="lazy" alt="" src="./public/group-2129.svg" />
+              <img class="upload-fields-item" loading="lazy" alt="" src="/static/public/group-2129.svg" />
 
-              <img class="upload-fields-inner" loading="lazy" alt="" src="./public/group-2187.svg" />
+              <img class="upload-fields-inner" loading="lazy" alt="" src="/static/public/group-2187.svg" />
             </div>
-            <div class="description-input-parent">
-              <textarea id="description-input" name="description" class="description-input" placeholder="여기에 상세 설명을 입력하세요..."></textarea>
-            </div>
+
+            <textarea id="description-input" name="description" class="user-message-content-child"
+              placeholder="여기에 상세 설명을 입력하세요!"></textarea>
             <div class="keywords-input-parent">
               <input id="keywords-input" name="keywords" class="keywords-input" placeholder="키워드 입력 (쉼표로 구분)">
             </div>
-            
-            
           </div>
         </div>
         <section class="wrapper2">
@@ -85,7 +84,7 @@
   <script>
     var fileInput = document.getElementById("image-upload-input");
     var imagePreview = document.getElementById("uploaded-image-preview");
-    
+
     fileInput.addEventListener("change", function () {
       var file = fileInput.files[0];
       if (file) {
@@ -100,7 +99,7 @@
     if (button) {
       button.addEventListener("click", function (e) {
         e.preventDefault(); // 기본 이벤트 방지
-        
+
         var description = document.getElementById("description-input").value;
         var fileInput = document.getElementById("image-upload-input");
         var file = fileInput.files[0];
