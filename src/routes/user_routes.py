@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 from flask import Blueprint, request, jsonify, session, render_template, redirect
-=======
-from flask import Blueprint, request, jsonify, session, render_template, redirect, url_for
->>>>>>> Stashed changes
 from src.models.user import User
 from src.models.photo import Photo
 
@@ -51,10 +47,6 @@ def get_user_list():
         return render_template('index.html', users=users)
     else:
         users, photos = User.get_user_listAndPhoto()
-<<<<<<< Updated upstream
-=======
-        print(photos)
->>>>>>> Stashed changes
         return render_template('main-loged-in.html', users=users, photos=photos)
 
 
@@ -63,11 +55,7 @@ def get_user_list():
 @user_bp.route('/mypage', methods=['GET'])
 def mypage_page():
     if 'userid' not in session:
-<<<<<<< Updated upstream
         return redirect('/login')
-=======
-        return redirect(url_for('user_bp.login'))
->>>>>>> Stashed changes
     current_userid = session['userid']
     current_username = User.find_by_userid(current_userid)['username']
 

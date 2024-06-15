@@ -1,8 +1,4 @@
-<<<<<<< Updated upstream
 from flask import Blueprint, request, jsonify, session, render_template
-=======
-from flask import Blueprint, request, jsonify, session, render_template, redirect, url_for
->>>>>>> Stashed changes
 from src.models.dm import DM
 from src.models.user import User
 
@@ -67,31 +63,17 @@ def delete_message_by_mid(mid):
 
 @dm_bp.route('/sendingDM', methods=['GET'])
 def sendingDM_page():
-<<<<<<< Updated upstream
-=======
-    if 'userid' not in session:
-        return redirect(url_for('user_bp.login'))
->>>>>>> Stashed changes
     return render_template('sending-d-m.html')
 
 @dm_bp.route('/sendedDM', methods=['GET'])
 def sendedDM_page():
-<<<<<<< Updated upstream
-=======
-    if 'userid' not in session:
-        return redirect(url_for('user_bp.login'))
->>>>>>> Stashed changes
     return render_template('sended-d-m.html')
 
 @dm_bp.route('/receivedDM', methods=['GET'])
 def receivedDM_page():
     # receiver_id가 현재 로그인한 사용자의 id인 메시지들을 가져옴
     if 'userid' not in session:
-<<<<<<< Updated upstream
         return jsonify({"message": "권한 없음"}), 401
-=======
-        return redirect(url_for('user_bp.login'))
->>>>>>> Stashed changes
     
     user_id = session['userid']
     messages = DM.get_messages(user_id)

@@ -61,10 +61,4 @@ class User:
         user_collection = app.mongo['users']
         user = user_collection.find_one({"userid": userid})
         return user['username']
-<<<<<<< Updated upstream
     
-=======
-    
-    
-
->>>>>>> Stashed changes
