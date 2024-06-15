@@ -33,12 +33,33 @@ class Photo:
 
         return filename
 
-    
+
+    @staticmethod
+    def update(photo_id, description, keywords, image_file=None):
+        photo_collection = app.mongo['photos']
+        update_data = {"description": description, "keywords": keywords}
+        if image_file:
+            # 새로운 이미지 저장
+            upload_folder = os.path.join(app.config['UPLOAD_FOLDER'])
+            if not os.path.exists(upload_folder):
+                os.makedirs(upload_folder)
+            
+            current_time = datetime.now().strftime("%Y%m%d%H%M%S")
+            filename = current_time + "." + secure_filename(image_file.filename)
+            image_path = os.path.join(upload_folder, filename)
+            image_file.save(image_path)
+            update_data["imageName"] = filename
+        
+        photo_collection.update_one(
+            {"_id": ObjectId(photo_id)},
+            {"$set": update_data}
+        )
     @staticmethod
     def search_by_keyword(keyword):
         photo_collection = app.mongo['photos']
         return list(photo_collection.find({"keywords": {"$regex": keyword, "$options": "i"}}))
     
+
     @staticmethod
     def get_all_photos():
         photo_collection = app.mongo['photos']
