@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MAIN</title>
+  <script src="https://kit.fontawesome.com/a3384fc31b.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 10%;
+      background-color: #f1f1f1;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    li a {
+      display: block;
+      color: #000;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    li a.active {
+      background-color: rgb(255, 186, 59);
+      color: white;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(255, 215, 142);
+      color: white;
+    }
+
+    .search-box {
+      height: 30px;
+      width: 60%;
+      background-color: aquamarine;
+      border-radius: 40px;
+      padding: 10px;
+      border: 1px solid black;
+    }
+
+    .search-txt {
+      border: none;
+      background: none;
+      outline: none;
+      float: left;
+      padding: 0px;
+      color: grey;
+      font-size: 16px;
+      line-height: 30px;
+      width: 200px;
+    }
+
+    .search-btn {
+      color: rgb(255, 186, 59);
+      float: right;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      margin-left: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <ul>
+    <li><a class="active" href="#">HOME</a></li>
+    <li><a href="#">DM</a></li>
+    <li><a href="#">MYPAGE</a></li>
+    <li><a href="#">LOGOUT</a></li>
+  </ul>
+
+  <!-- <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h1>네비게이션 세로 버전입니다!</h1>
+  </div> -->
+  <div class="main">
+    <div>
+      <form class="search-box" action="" method="get">
+        <input class="search-txt" type="text" name="" placeholder="Enter keyword!">
+        <button class="search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <iframe src="URL" title="네비게이션에 따른 페이지">
+  </div>
+</body>
+
+</html>

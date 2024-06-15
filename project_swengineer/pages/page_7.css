@@ -1,0 +1,312 @@
+.page-7 .vector-3 {
+  margin: 0 2px 6px 2px;
+  width: 31px;
+  height: 30px;
+}
+.page-7 .main-1 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-7 .frame-2144 {
+  margin: 0 7.2px 62px 7.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-7 .epmessage {
+  width: 38px;
+  height: 40px;
+}
+.page-7 .message {
+  margin-bottom: 6px;
+  display: flex;
+  width: 38px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.page-7 .dm-1 {
+  margin: 0 7.1px;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-7 .frame-2145 {
+  margin: 0 5.8px 186px 5.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-7 .group {
+  margin: 0 9.8px 6px 9.8px;
+  width: 30px;
+  height: 33px;
+}
+.page-7 .logout {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-7 .frame-2147 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-7 .container-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.page-7 .face {
+  margin: 0 10.5px 6px 10.5px;
+  width: 35px;
+  height: 31.5px;
+}
+.page-7 .mypage {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-7 .frame-2146 {
+  position: absolute;
+  left: 50%;
+  top: 289px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.page-7 .navigation {
+  background: #FEF1DE;
+  position: relative;
+  margin-right: 260px;
+  display: flex;
+  padding: 39px 1px 0 0;
+  width: 100px;
+  height: 2500px;
+  box-sizing: border-box;
+}
+.page-7 .ellipse-286 {
+  border-radius: 59.5px;
+  background: #EAEAEA;
+  margin-right: 21px;
+  width: 119px;
+  height: 119px;
+}
+.page-7 .user {
+  margin: 0 7px 21px 7px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 25px;
+  color: #00215D;
+}
+.page-7 .container-3 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 500;
+  font-size: 15px;
+  color: #B3B3B3;
+}
+.page-7 .container-2 {
+  background: #EAEAEA;
+  padding: 4px 7px 6px 7px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-7 .container {
+  margin: 19px 0 22px 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.page-7 .container-4 {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.page-7 .vector {
+  width: 28.9px;
+  height: 35.6px;
+}
+.page-7 .frame-2139 {
+  border-radius: 20px;
+  background: #FEF1DE;
+  display: flex;
+  padding: 20px 0 21.4px 0.4px;
+  width: 85.6px;
+  height: 77px;
+  box-sizing: border-box;
+}
+.page-7 .dm {
+  border-radius: 20px;
+  margin: 30px 0 12px 0;
+  display: flex;
+  width: 85.6px;
+  height: 77px;
+  box-sizing: border-box;
+}
+.page-7 .container-1 {
+  margin: 0 41.5px 55px 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1154.6px;
+  box-sizing: border-box;
+}
+.page-7 .line-1 {
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+  position: relative;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .line-2 {
+  background: #FFFFFF;
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .group-2129 {
+  background: #EAEAEA;
+  position: relative;
+  display: flex;
+  padding: 0px 0px 0 0px;
+  width: 285px;
+  height: 285px;
+  box-sizing: border-box;
+}
+.page-7 .line-11 {
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+  position: relative;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .line-21 {
+  background: #FFFFFF;
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .group-2130 {
+  background: #EAEAEA;
+  position: relative;
+  display: flex;
+  padding: 0px 0px 0 0px;
+  width: 285px;
+  height: 285px;
+  box-sizing: border-box;
+}
+.page-7 .line-12 {
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+  position: relative;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .line-22 {
+  background: #FFFFFF;
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .group-2131 {
+  background: #EAEAEA;
+  position: relative;
+  display: flex;
+  padding: 0px 0px 0 0px;
+  width: 285px;
+  height: 285px;
+  box-sizing: border-box;
+}
+.page-7 .line-13 {
+  background: #FFFFFF;
+  transform: rotate(-45deg);
+  position: relative;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .line-23 {
+  background: #FFFFFF;
+  transform: rotate(-135deg);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 285px;
+  height: 0.8px;
+}
+.page-7 .group-2132 {
+  background: #EAEAEA;
+  position: relative;
+  display: flex;
+  padding: 0px 0px 0 0px;
+  width: 285px;
+  height: 285px;
+  box-sizing: border-box;
+}
+.page-7 .container-5 {
+  margin-bottom: 47px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  width: 1200px;
+  box-sizing: border-box;
+}
+.page-7 .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 20.5px;
+  color: #AAAAAA;
+}
+.page-7 .container {
+  border-radius: 6px;
+  border: 0.9px solid #C5C5C5;
+  position: relative;
+  margin: 0 0px 0 4px;
+  padding: 26px 34.4px 148px 34.4px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-7 .main {
+  margin: 188px 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.container-6 {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  width: 1920px;
+  box-sizing: border-box;
+}

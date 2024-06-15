@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../static/css/global.css" />
+    <link rel="stylesheet" href="../static/css/my-page.css" />
+    <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Regular.otf");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Medium.otf");
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Bold.otf");
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-SemiBold.otf");
+            font-weight: 600;
+        }
+
+        /* 이미지 사이즈 조정 */
+        .photo-list img {
+            max-width: 150px; /* 최대 너비를 조절하여 이미지를 작게 보이도록 설정 */
+            height: auto; /* 자동으로 높이 조정 */
+            margin-right: 10px; /* 이미지 사이의 간격을 조정 */
+            margin-bottom: 10px; /* 아래쪽 간격을 조정 */
+            cursor: pointer; /* 포인터 커서 설정 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mypage2">
+        {% include 'navigation.html' %}
+        <section class="mypage-inner">
+            <div class="frame-parent9">
+                <main class="frame-main">
+                    <section class="frame-section">
+                        <div class="frame-wrapper5">
+                            <div class="ellipse-parent">
+                                <div class="frame-child2"></div>
+                                <img class="icon1" loading="lazy" alt="" src="../static/public/1@2x.png" id="modifyme" />
+                            </div>
+                        </div>
+                    </section>
+                    <div class="user-info">
+                        <h1 class="user-name">{{ username }}</h1>
+                        <h2 class="h2">한 줄 소개</h2>
+                    </div>
+                    <div class="photo-list">
+                        {% for photo in photos %}
+                        <img src="../static/uploads/{{ photo.imageName }}" alt="Photo" class="user-photo" data-photo-id="{{ photo._id }}">
+                        {% endfor %}
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        var modifyme = document.getElementById("modifyme");
+        if (modifyme) {
+            modifyme.addEventListener("click", function (e) {
+                window.location.href = "/users/modifyme";
+            });
+        }
+
+        var userPhotos = document.querySelectorAll(".user-photo");
+        userPhotos.forEach(function(photo) {
+            photo.addEventListener("click", function(e) {
+                var photoId = photo.getAttribute("data-photo-id");
+                window.location.href = "/photos/mypost?id=" + photoId;
+            });
+        });
+    </script>
+</body>
+
+</html>

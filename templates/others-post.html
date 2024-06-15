@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/others-post.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="otherspost">
+    {% include 'navigation.html' %}
+    <section class="otherspost-inner">
+      <div class="frame-parent34">
+        <div class="frame-wrapper16">
+          <div class="frame-parent35">
+            <div class="ellipse-group">
+              <div class="frame-child25"></div>
+              <div class="frame-wrapper17">
+                <div class="frame-parent36">
+                  <div class="user-wrapper">
+                    <h3 class="user5">user 닉네임~</h3>
+                  </div>
+                  <input class="input" placeholder="한줄소개~" type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="dm-wrapper5">
+              <img class="dm-icon" loading="lazy" alt="" src="./public/dm.svg" id="dM" />
+            </div>
+          </div>
+        </div>
+        <div class="parent1">
+          <div class="div26">
+            <img class="inner" loading="lazy" alt="" src="./public/group-21291.svg" />
+
+            <img class="child1" loading="lazy" alt="" src="./public/group-2130.svg" />
+
+            <img class="child2" loading="lazy" alt="" src="./public/group-2131.svg" />
+
+            <img class="child3" loading="lazy" alt="" src="./public/group-2132.svg" />
+          </div>
+          <div class="div27">
+            <div class="child4"></div>
+            <div class="div28">사진 설명</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    var dM = document.getElementById("dM");
+    if (dM) {
+      dM.addEventListener("click", function (e) {
+        window.location.href = "/dms/sendingDM";
+      });
+    }
+  </script>
+</body>
+
+</html>

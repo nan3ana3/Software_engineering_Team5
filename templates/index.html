@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/index.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+</head>
+
+<body>
+  <div class="mainlogedout">
+    {% include 'navigation.html' %}
+    <section class="main-description-wrapper">
+      <div class="main-description">
+        <div class="main-description-inner">
+          <div class="parent">
+            <div class="div">모든 사진을 잇는 사진이음</div>
+            <div class="slogan">
+              <div class="div1">
+                <p class="p">사진으로 추억을 친구들과 나누고</p>
+                <p class="p1">메세지로 소통해요</p>
+              </div>
+              <div class="login-button-container">
+                <button class="button" id="startService">
+                  <div class="div2">사진이음 시작하기</div>
+                </button>
+              </div>
+            </div>
+            <div class="div3">지금 이 서비스를 사용하는 친구는?</div>
+          </div>
+        </div>
+<<<<<<< Updated upstream
+        <hr width="500px">
+        <div class="div3">
+          {% for user in users %}
+          {{ user.username }}
+          {% endfor %}
+=======
+          <ul style="text-align: center;">
+            {% for user in users %}
+            {{ user.username }}
+            {% endfor %}
+          </ul>
+>>>>>>> Stashed changes
+        </div>
+      </div>
+    </section>
+
+  </div>
+  <script>
+    // var buttonMain = document.getElementById("buttonMain");
+    // if (buttonMain) {
+    //   buttonMain.addEventListener("click", function (e) {
+    //     // login 상태면 "/main" logout 상태면 "/"
+    //     window.location.href = "/";
+    //   });
+    // }
+
+    // var buttonDM = document.getElementById("buttonDM");
+    // if (buttonDM) {
+    //   buttonDM.addEventListener("click", function (e) {
+    //     window.location.href = "/receivedDM";
+    //   });
+    // }
+
+    // var buttonMypage = document.getElementById("buttonMypage");
+    // if (buttonMypage) {
+    //   buttonMypage.addEventListener("click", function (e) {
+    //     window.location.href = "/users/mypage";
+    //   });
+    // }
+
+    // var buttonLogout = document.getElementById("buttonLogout");
+    // if (buttonLogout) {
+    //   buttonLogout.addEventListener("click", function (e) {
+    //     window.location.href = "/";
+    //   });
+    // }
+
+    var startService = document.getElementById("startService");
+    if (startService) {
+      startService.addEventListener("click", function (e) {
+        window.location.href = "/users/login";
+      });
+    }
+  </script>
+</body>
+
+</html>

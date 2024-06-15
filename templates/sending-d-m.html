@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/sending-d-m.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sendingdm">
+    {% include 'navigation.html' %}
+    <div class="user-message-content-wrapper">
+      <div class="user-message-content">
+        <div class="user-message">
+          <div class="user-message-details">
+            <div class="user-avatar"></div>
+            <div class="user-message-header">
+              <h1 class="to-user-name">To. user name</h1>
+            </div>
+          </div>
+        </div>
+        <textarea class="user-message-content-child" placeholder="메세지" rows="{15}" cols="{42}">
+          </textarea>
+        <button class="frame-button" id="frameButton">
+          <b class="b1">전송하기</b>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var frameButton = document.getElementById("frameButton");
+    if (frameButton) {
+      frameButton.addEventListener("click", function (e) {
+        window.location.href = "/dms/sendedDM";
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<div class="navigation">
+    <div class="frame-parent">
+        <div class="frame-wrapper" id="buttonMain">
+            <div class="frame-group">
+                <div class="vector-wrapper">
+                    <img class="vector-icon" loading="lazy" alt="" src="../static/public/vector.svg" />
+                </div>
+                <a class="main">Main</a>
+            </div>
+        </div>
+        <div class="frame-container" id="buttonDM">
+            <div class="message-parent">
+                <img class="message-icon" loading="lazy" alt="" src="../static/public/message.svg" />
+                <div class="dm-wrapper">
+                    <div class="dm">DM</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-inner" id="buttonMypage">
+        <div class="mypage-content-parent">
+            <div class="mypage-content">
+                <img class="face-icon" loading="lazy" alt="" src="../static/public/face.svg" />
+            </div>
+            <div class="mypage">Mypage</div>
+        </div>
+    </div>
+    <div class="logout-content-wrapper" id="buttonLogout">
+        <div class="logout-content">
+            <div class="logout-button">
+                <img class="group-icon" loading="lazy" alt="" src="../static/public/group.svg" />
+            </div>
+            <div class="logout">Logout</div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('buttonLogout').addEventListener('click', function() {
+                fetch('/users/signout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = "/users/login";  // 로그아웃 후 리디렉션
+                    }
+                });
+            });
+        });
+    </script>
+</div>

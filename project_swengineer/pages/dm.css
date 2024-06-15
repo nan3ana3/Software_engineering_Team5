@@ -1,0 +1,230 @@
+.dm .rectangle-4682 {
+  background: #DDDDDD;
+  margin-bottom: 11px;
+  align-self: flex-start;
+  width: 211px;
+  height: 20px;
+}
+.dm .rectangle-4683 {
+  background: #DDDDDD;
+  margin-bottom: 11px;
+  width: 422px;
+  height: 20px;
+}
+.dm .rectangle-4684 {
+  background: #DDDDDD;
+  margin-bottom: 11px;
+  width: 422px;
+  height: 20px;
+}
+.dm .rectangle-4685 {
+  background: #DDDDDD;
+  align-self: flex-start;
+  width: 158px;
+  height: 20px;
+}
+.dm .container-1 {
+  background: #C0C0C0;
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 23px 25px 19px 25px;
+  width: 472px;
+  box-sizing: border-box;
+}
+.dm .rectangle-4679 {
+  background: #D9D9D9;
+  width: 472px;
+  height: 308px;
+}
+.dm .container {
+  margin: 1260px 36px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 472px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.dm .rectangle-4680 {
+  background: #D9D9D9;
+  margin: 1455px 236px 0 0;
+  width: 472px;
+  height: 308px;
+}
+.dm .vector-2 {
+  margin: 0 2px 6px 2px;
+  width: 31px;
+  height: 30px;
+}
+.dm .main-1 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.dm .frame-2144 {
+  margin: 0 7.2px 62px 7.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.dm .epmessage {
+  width: 38px;
+  height: 40px;
+}
+.dm .message {
+  margin-bottom: 6px;
+  display: flex;
+  width: 38px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.dm .dm-1 {
+  margin: 0 7.1px;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.dm .frame-2145 {
+  margin: 0 5.8px 186px 5.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.dm .group {
+  margin: 0 9.8px 6px 9.8px;
+  width: 30px;
+  height: 33px;
+}
+.dm .logout {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.dm .frame-2147 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.dm .container-3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.dm .face {
+  margin: 0 10.5px 6px 10.5px;
+  width: 35px;
+  height: 31.5px;
+}
+.dm .mypage {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.dm .frame-2146 {
+  position: absolute;
+  left: 50%;
+  top: 289px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.dm .navigation {
+  background: #FEF1DE;
+  position: relative;
+  margin-right: 304px;
+  display: flex;
+  padding: 39px 1px 0 0;
+  width: 100px;
+  height: 2500px;
+  box-sizing: border-box;
+}
+.dm .ellipse-1 {
+  border-radius: 100px;
+  background: #EFEFEF;
+  margin-right: 53px;
+  width: 200px;
+  height: 200px;
+}
+.dm .to-user-name {
+  margin: 56px 0 85px 0;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 50px;
+  color: #000000;
+}
+.dm .container-2 {
+  margin-bottom: 83px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.dm .container {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 30px;
+  color: #D6D6D6;
+}
+.dm .group-2186 {
+  border-radius: 6px;
+  border: 0.9px solid #C5C5C5;
+  position: relative;
+  margin-bottom: 80px;
+  padding: 24px 26px 332px 26px;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.dm .container-1 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 600;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+.dm .frame-38 {
+  border-radius: 60px;
+  background: var(--d-9-d-9-d-9, #FE8F5A);
+  display: flex;
+  align-self: flex-end;
+  padding: 20px 0 21px 0;
+  width: 400px;
+  box-sizing: border-box;
+}
+.dm .main {
+  margin: 125px 0;
+  display: flex;
+  flex-direction: column;
+  width: 1112px;
+  box-sizing: border-box;
+}
+.dm {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  width: 1920px;
+  box-sizing: border-box;
+}

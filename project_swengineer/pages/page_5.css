@@ -1,0 +1,291 @@
+.page-5 .vector-2 {
+  margin: 0 2px 6px 2px;
+  width: 31px;
+  height: 30px;
+}
+.page-5 .main-1 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-5 .frame-2144 {
+  margin: 0 7.2px 62px 7.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .epmessage {
+  width: 38px;
+  height: 40px;
+}
+.page-5 .message {
+  margin-bottom: 6px;
+  display: flex;
+  width: 38px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.page-5 .dm {
+  margin: 0 7.1px;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-5 .frame-2145 {
+  margin: 0 5.8px 186px 5.8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .group {
+  margin: 0 9.8px 6px 9.8px;
+  width: 30px;
+  height: 33px;
+}
+.page-5 .logout {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-5 .frame-2147 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.page-5 .face {
+  margin: 0 10.5px 6px 10.5px;
+  width: 35px;
+  height: 31.5px;
+}
+.page-5 .mypage {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 18px;
+  color: #F1824D;
+}
+.page-5 .frame-2146 {
+  position: absolute;
+  left: 50%;
+  top: 289px;
+  translate: -50% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.page-5 .navigation {
+  background: #FEF1DE;
+  position: relative;
+  margin-right: 507px;
+  display: flex;
+  padding: 39px 1px 0 0;
+  width: 100px;
+  height: 2500px;
+  box-sizing: border-box;
+}
+.page-5 .signup {
+  margin: 0 0 49px 1px;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 50px;
+  color: #000000;
+}
+.page-5 .container {
+  margin-bottom: 12px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 27px;
+  color: #000000;
+}
+.page-5 .rectangle-4761 {
+  border-radius: 10px;
+  background: #FFFCFA;
+  margin: 0 0 6px 1px;
+  width: 477px;
+  height: 76px;
+}
+.page-5 .container-1 {
+  margin: 0 1px;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  color: #FF1212;
+}
+.page-5 .group-2133 {
+  border-radius: 10px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .id {
+  margin: 0 1.9px 11px 1.9px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 27px;
+  color: #000000;
+}
+.page-5 .rectangle-4758 {
+  border-radius: 10px;
+  background: #FFFCFA;
+  margin-bottom: 7px;
+  width: 477px;
+  height: 76px;
+}
+.page-5 .container-2 {
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  color: #FF1212;
+}
+.page-5 .group-2134 {
+  border-radius: 10px;
+  margin: 0 0 14px 1px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .password {
+  margin-bottom: 14px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 27px;
+  color: #000000;
+}
+.page-5 .rectangle-4759 {
+  border-radius: 10px;
+  background: #FFFCFA;
+  margin-bottom: 9px;
+  width: 477px;
+  height: 76px;
+}
+.page-5 .container-3 {
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  color: #FF1212;
+}
+.page-5 .group-2135 {
+  border-radius: 10px;
+  margin: 0 0 14px 1px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .password-1 {
+  margin-bottom: 9px;
+  display: inline-block;
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 27px;
+  color: #000000;
+}
+.page-5 .rectangle-4760 {
+  border-radius: 10px;
+  background: #FFFCFA;
+  margin-bottom: 11px;
+  width: 477px;
+  height: 76px;
+}
+.page-5 .container-4 {
+  align-self: flex-start;
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 15px;
+  color: #FF1212;
+}
+.page-5 .group-2136 {
+  border-radius: 10px;
+  margin-left: 1px;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .frame-2 {
+  margin-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  box-sizing: border-box;
+}
+.page-5 .container-6 {
+  overflow-wrap: break-word;
+  font-family: 'Pretendard', 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 27px;
+  color: #FFFFFF;
+}
+.page-5 .container-5 {
+  border-radius: 30px;
+  background: #F1824D;
+  margin-left: 1px;
+  display: flex;
+  padding: 19px 0;
+  width: 477px;
+  box-sizing: border-box;
+}
+.page-5 .main {
+  border-radius: 30px;
+  background: #EAEAEA;
+  position: relative;
+  margin: 28px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 66px 0 100px 0;
+  width: 707px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+.container-7 {
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  width: 1920px;
+  box-sizing: border-box;
+}

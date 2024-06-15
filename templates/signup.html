@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/signup.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="signup">
+    {% include 'navigation.html' %}
+    <div class="main-container">
+      <!-- 회원가입 폼 -->
+      <form class="main7" id="signup-form">
+        <div class="main-item"></div>
+        <div class="signup-form">
+          <div class="signup-wrapper">
+            <a class="signup1">Signup</a>
+          </div>
+          <div class="signup-form1">
+            <!-- 닉네임 입력란 -->
+            <div class="input-group-div">
+              <div class="inputDescript">닉네임</div>
+              <div class="input-div">
+                <input type="text" name="username" id="username" class="input-text" required />
+                <div class="div18" id="username-error"></div>
+              </div>
+            </div>
+
+            <!-- ID 입력란 -->
+            <div class="input-group-div">
+              <div class="inputDescript">ID</div>
+              <div class="input-div">
+                <input type="text" name="userid" id="userid" class="input-text" required />
+              </div>
+              <div class="div19" id="id-error"></div>
+            </div>
+
+            <!-- 비밀번호 입력란 -->
+            <div class="input-group-div">
+              <div class="inputDescript">비밀번호</div>
+              <div class="input-div">
+                <input type="password" name="password" id="password" class="input-text" required />
+              </div>
+              <div class="div20" id="password-error"></div>
+            </div>
+
+            <!-- 비밀번호 확인 입력란 -->
+            <div class="input-group-div">
+              <div class="inputDescript">비밀번호 확인</div>
+              <div class="input-div">
+                <input type="password" name="confirm-password" id="confirm-password" class="input-text" required />
+              </div>
+              <div class="div21" id="confirm-password-error"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 회원 가입 버튼 -->
+        <button type="submit" class="button3" id="signup-button">회원가입</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "/users/login";
+      });
+    }
+
+
+    // 회원가입 버튼 클릭 이벤트 처리
+    document.getElementById("signup-button").addEventListener("click", function (e) {
+      e.preventDefault(); // 폼의 기본 동작 방지
+
+      // 입력된 정보 가져오기
+      var username = document.getElementById("username").value;
+      var userid = document.getElementById("userid").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+
+
+      // 서버로 보낼 데이터
+      var data = {
+        "username": username,
+        "userid": userid,
+        "password": password,
+        "confirmPassword": confirmPassword
+      };
+
+      // 서버로 POST 요청 보내기
+      fetch("/users/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          // 서버로부터 받은 응답 처리
+          console.log(data);
+          alert("회원가입이 완료되었습니다.");
+          window.location.href = "/users/login"; // 로그인 페이지로 리다이렉트
+
+        })
+        .catch(function (error) {
+          // 오류 처리
+          alert(error.message);
+          console.error("There was a problem with your fetch operation:", error);
+        });
+    });
+  </script>
+</body>
+
+</html>

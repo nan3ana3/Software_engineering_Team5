@@ -1,0 +1,174 @@
+.vector-icon {
+    height: 22.5px;
+    width: 23.3px;
+    position: relative;
+  }
+  .vector-wrapper {
+    width: 31px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-10xs) 0 var(--padding-9xs);
+    box-sizing: border-box;
+  }
+  .main {
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+    display: inline-block;
+    min-width: 30px;
+  }
+  .frame-group,
+  .frame-wrapper {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .frame-group {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: var(--padding-2xs-5) var(--padding-smi);
+    gap: var(--gap-8xs-5);
+  }
+  .frame-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--padding-smi-8) var(--padding-9xs) var(--padding-smi-7);
+    cursor: pointer;
+  }
+  .message-icon {
+    width: 28.5px;
+    height: 30px;
+    position: relative;
+  }
+  .dm {
+    position: relative;
+    display: inline-block;
+    min-width: 21px;
+  }
+  .dm-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-8xs) 0 var(--padding-10xs);
+  }
+  .message-parent {
+    overflow: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--padding-2xs-5) var(--padding-smi);
+    gap: var(--gap-8xs-5);
+  }
+  .frame-container,
+  .frame-parent,
+  .message-parent {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .frame-container {
+    overflow: hidden;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--padding-smi-7) var(--padding-9xs) var(--padding-smi-8);
+    cursor: pointer;
+    z-index: 1;
+    margin-top: -0.2px;
+  }
+  .frame-parent {
+    align-self: stretch;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 var(--padding-12xs) 0 0;
+  }
+  .face-icon {
+    height: 23.6px;
+    width: 26.3px;
+    position: relative;
+  }
+  .mypage-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-2xs) 0 var(--padding-xs);
+  }
+  .mypage {
+    position: relative;
+    display: inline-block;
+    min-width: 49px;
+  }
+  .mypage-content-parent,
+  .navigation-inner {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .mypage-content-parent {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: var(--padding-2xs-5) var(--padding-smi) var(--padding-2xs-6);
+    gap: var(--gap-8xs-4);
+  }
+  .navigation-inner {
+    margin-left: -9.5px;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--padding-smi-8) var(--padding-9xs) var(--padding-smi-7);
+    cursor: pointer;
+  }
+  .group-icon {
+    height: 24.8px;
+    width: 22.5px;
+    position: relative;
+  }
+  .logout-button {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 var(--padding-3xs) 0 var(--padding-2xs);
+  }
+  .logout {
+    position: relative;
+    display: inline-block;
+    min-width: 43px;
+  }
+  .logout-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: var(--padding-2xs-5) var(--padding-smi) var(--padding-2xs-6);
+    gap: var(--gap-8xs-4);
+  }
+  .logout-content-wrapper,
+  .navigation {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .logout-content-wrapper {
+    margin-left: -6.5px;
+    overflow: hidden;
+    flex-direction: row;
+    padding: var(--padding-smi-8) var(--padding-9xs) var(--padding-smi-7);
+    cursor: pointer;
+  }
+  .navigation {
+    height: 810px;
+    width: 75px;
+    background-color: var(--color-antiquewhite);
+    overflow-y: hidden;
+    flex-direction: column;
+    padding: var(--padding-10xs) var(--padding-9xs) var(--padding-787xl);
+    box-sizing: border-box;
+    gap: var(--gap-12xs);
+  }
+  

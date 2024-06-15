@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/modify-me.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="modifyme">
+    {% include 'navigation.html' %}
+    <div class="profile-details">
+      <div class="name-input">
+        <div class="edit-image">
+          <div class="profile-placeholder"></div>
+          <img class="icon" loading="lazy" alt="" src="../static/public/.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="profile-content-wrapper">
+      <div class="profile-content">
+        <div class="edit-profile">
+          <h1 class="h1">나의 프로필을 수정해보세요!!</h1>
+        </div>
+        <div class="profile-input">
+          <div class="name-box-parent">
+            <div class="name-box"></div>
+            <div class="div10">사용자 닉네임</div>
+          </div>
+          <div class="rectangle-parent">
+            <div class="frame-child1"></div>
+            <div class="div11">한줄소개</div>
+          </div>
+        </div>
+        <button class="save-button-container" id="saveButtonContainer">
+          <b class="b">저장하기</b>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var saveButtonContainer = document.getElementById("saveButtonContainer");
+    if (saveButtonContainer) {
+      saveButtonContainer.addEventListener("click", function (e) {
+        window.location.href = "/users/mypage";
+      });
+    }
+  </script>
+</body>
+
+</html>

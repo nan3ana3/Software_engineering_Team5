@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/login.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    {% include 'navigation.html' %}
+    <!-- 로그인 페이지 -->
+    <div class="main-wrapper">
+      <div class="main5">
+        <div class="main-child"></div>
+        <div class="frame-parent21">
+          <div class="login-wrapper">
+            <h1 class="login1">login</h1>
+          </div>
+          <!-- ID 입력란 -->
+          <div class="div15">
+            <div class="id-parent">
+              <div class="id">ID</div>
+              <input type="text" name="userid" id="userid" required /> <!-- 추가 -->
+            </div>
+            <!-- PW 입력란 -->
+            <div class="pw-parent">
+              <h3 class="pw">PW</h3>
+              <input type="password" name="password" id="password" required /> <!-- 추가 -->
+            </div>
+          </div>
+        </div>
+        <!-- 로그인 버튼 -->
+        <div class="group">
+          <button class="button2" id="login-button">로그인</button>
+          <div class="frame">
+            <h3 class="h3" id="signup-button">회원가입</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        window.location.href = "/main";
+      });
+    }
+
+    var signupButton = document.getElementById("signup-button");
+    if (signupButton) {
+      signupButton.addEventListener("click", function (e) {
+        window.location.href = "/users/signup";
+      });
+    }
+
+
+    var loginButton = document.getElementById("login-button");
+    if (loginButton) {
+      loginButton.addEventListener("click", function (e) {
+        e.preventDefault(); // 폼의 기본 동작 방지
+
+        // 입력된 정보 가져오기
+        var userid = document.getElementById("userid").value;
+        var password = document.getElementById("password").value;
+
+        // 서버로 보낼 데이터
+        var data = {
+          "userid": userid,
+          "password": password
+        };
+
+        // 서버로 POST 요청 보내기
+        fetch("/users/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then(function (response) {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then(function (data) {
+            // 서버로부터 받은 응답 처리
+            console.log(data);
+            // 로그인 성공 시 처리 (예: 다음 페이지로 리다이렉트)
+            window.location.href = "/main";
+          })
+          .catch(function (error) {
+            // 오류 처리
+            console.error("There was a problem with your fetch operation:", error);
+          });
+      });
+    }
+
+  </script>
+</body>
+
+</html>

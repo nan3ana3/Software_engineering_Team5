@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+  <link rel="stylesheet" href="../static/css/global.css" />
+  <link rel="stylesheet" href="../static/css/my-post.css" />
+  <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+  <style>
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Regular.otf");
+      font-weight: 400;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Medium.otf");
+      font-weight: 500;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-Bold.otf");
+      font-weight: 700;
+    }
+
+    @font-face {
+      font-family: "Pretendard";
+      src: url("static/public/Pretendard-SemiBold.otf");
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="mypost">
+      {% include 'navigation.html' %}
+      <section class="mypost-inner">
+          <section class="profile-content-parent">
+              <div class="profile-content1">
+                  <div class="profile-information">
+                      <div class="ellipse-container">
+                          <div class="frame-child26"></div>
+                          <div class="frame-wrapper20">
+                              <div class="nickname-details-parent">
+                                  <div class="nickname-details">
+                                      <h3 class="user6">{{ photo.uploader_id }}</h3> <!-- 업로더 닉네임 혹은 ID 출력 -->
+                                  </div>
+                                  <input class="input1" placeholder="한줄소개~" type="text" /> <!-- 한 줄 소개 입력창 -->
+                              </div>
+                          </div>
+                      </div>
+                      <div class="edit-profile1">
+                          <img class="icon3" loading="lazy" alt="Edit Profile" src="../static/public/2@2x.png" id="image" />
+                      </div>
+                  </div>
+              </div>
+              <div class="user-information1">
+                  <div class="div29">
+                      {% for keyword in photo.keywords %}
+                      <img class="child" loading="lazy" alt="Keyword" src="../static/public/group-21292.svg" />
+                      {% endfor %}
+                  </div>
+                  <div class="div30">
+                      <div class="description-background">{{ photo.description }}</div> <!-- 사진 설명 출력 -->
+                      <div class="div31">사진 설명</div>
+                  </div>
+              </div>
+          </section>
+      </section>
+  </div>
+
+
+  <script>
+    var button = document.getElementById("button");
+    if (button) {
+      button.addEventListener("click", function (e) {
+        e.preventDefault(); // 기본 이벤트 방지
+        
+        var description = document.getElementById("description-input").value;
+        var fileInput = document.getElementById("image-upload-input");
+        var file = fileInput.files[0];
+        var keywords = document.getElementById("keywords-input").value;
+
+        if (!file) {
+          alert("이미지를 선택하세요.");
+          return;
+        }
+
+        var formData = new FormData();
+        formData.append("description", description);
+        formData.append("image", file);
+        formData.append("keywords", keywords);
+
+        console.log(formData); // FormData 확인
+
+        fetch("/photos/upload", {
+          method: "POST",
+          body: formData,
+          // headers 설정 제거 (multipart/form-data로 자동 설정됨)
+        })
+          .then(function (response) {
+            if (response.ok) {
+              alert("업로드 성공");
+              window.location.href = "/";
+            } else {
+              alert("업로드 실패");
+            }
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+          });
+      });
+    }
+
+  </script>
+</body>
+</html>

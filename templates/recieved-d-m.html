@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="../static/css/global.css" />
+    <link rel="stylesheet" href="../static/css/my-page.css" />
+    <script type="text/javascript" src="/static/js/navigation.js"></script>
+
+    <style>
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Regular.otf");
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Medium.otf");
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-Bold.otf");
+            font-weight: 700;
+        }
+
+        @font-face {
+            font-family: "Pretendard";
+            src: url("static/public/Pretendard-SemiBold.otf");
+            font-weight: 600;
+        }
+
+        .container {
+            display: flex;
+        }
+
+
+        .dm-list {
+            flex: 3;
+            padding: 20px;
+        }
+
+        .message-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        .message-content {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .message-actions {
+            display: flex;
+        }
+
+        .message-actions img {
+            cursor: pointer;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            {% include 'navigation.html' %}
+        </div>
+        <div class="dm-list">
+            <h1 class="dm11">친구들이 보낸 DM을 확인해보세요</h1>
+            <div class="dm-list-view">
+                {% for message in messages %}
+                <div class="message-item">
+                    <div class="profile-wrapper">
+                        <div class="profile-div"></div>
+                    </div>
+                    <div class="message-content">
+                        <b class="dm-username">{{ message.sender_name }}</b>
+                        <p class="dm-text">{{ message.content }}</p>
+                    </div>
+                    <div class="message-actions">
+                      <button class="delete-button" onclick="deleteMessage('{{ message._id }}')">삭제</button>
+                      <img class="reply-icon" loading="lazy" alt="Reply" src="../static/public/dm.svg" onclick="replyMessage('{{ message.sender_id }}', '{{ message._id }}')" />
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function replyMessage(senderId, parentId) {
+            var reply = prompt("답장을 입력하세요:");
+            if (reply) {
+                fetch('/dms/send', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        receiver_id: senderId,
+                        content: reply,
+                        parent_mid: parentId
+                    })
+                }).then(response => response.json())
+                  .then(data => {
+                      if (data.message === "메시지 송신") {
+                          alert("메시지를 성공적으로 보냈습니다.");
+                      } else {
+                          alert("메시지 전송에 실패했습니다.");
+                      }
+                  });
+            }
+        }
+
+        function deleteMessage(messageId) {
+            if (confirm("정말로 이 메시지를 삭제하시겠습니까?")) {
+                fetch(`/dms/delete_message/${messageId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(response => response.json())
+                  .then(data => {
+                        alert("메시지가 성공적으로 삭제되었습니다.");
+                        location.reload();
+                  });
+            }
+        }
+    </script>
+</body>
+
+</html>
