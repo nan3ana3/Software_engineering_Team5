@@ -253,15 +253,10 @@
   width: 100%;
   position: absolute;
   margin: 0 !important;
-  top: 148.5px;
-  right: -920.3px;
-  bottom: -148.5px;
-  left: 920.3px;
+  right : 5px;
   border-radius: var(--br-8xs-5);
   border: 0.7px solid var(--color-silver);
   box-sizing: border-box;
-  transform: rotate(180deg);
-  transform-origin: 0 0;
 }
 .div24 {
   height: 24.8px;
