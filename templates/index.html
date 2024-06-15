@@ -32,11 +32,27 @@
           </div>
         </div>
         <hr width="500px">
-        <div class="div3">
+        <!-- 사용자 리스트 뷰 -->
+        <div class="user-list-view">
+          {% for user in users %}
+          <div class="user-row">
+            <div class="user">
+              <div class="profile-img"></div>
+              <div class="user-name-container-parent">
+                <div class="user-name-container">
+                  <div class="user-name">{{ user.username }}</div>
+                </div>
+                <div class="user-description">안녕하세요!</div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <!-- <div class="div3">
           {% for user in users %}
           {{ user.username }}
           {% endfor %}
-        </div>
+        </div> -->
       </div>
     </section>
 
