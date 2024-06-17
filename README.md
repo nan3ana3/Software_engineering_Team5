@@ -11,13 +11,15 @@
 ## 화면 구성
 |Main|Login|
 |------|---|
-|테스트1|테스트2|
+|![메인(로그인X)](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/07a05dfa-f15a-48d6-b3ce-30a89a1f9e11)|![로그인](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/fcce1524-6a26-44d9-ac20-5a19900b42a0)|
 
 |Main(Login)|Post|
 |------|---|
+|![DM send](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/7b30380c-0a6b-4a96-86fc-ee35ad540863)|![게시글 업로드, 수정](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/89b58ce4-2f11-477e-b4a9-19b01e5753bd)|
 
 |DM(Send)|DM(Receive)|
 |------|---|
+|![DM send](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/7b30380c-0a6b-4a96-86fc-ee35ad540863)|![받은 메세지함](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/a05eca7a-2d7b-40a8-8dc2-58b27818fd6b)|
 
 ## 🎨실행방법
 1) **git clone**
