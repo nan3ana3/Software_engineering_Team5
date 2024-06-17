@@ -15,7 +15,7 @@
 
 |Main(Login)|Post|
 |------|---|
-|![DM send](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/7b30380c-0a6b-4a96-86fc-ee35ad540863)|![게시글 업로드, 수정](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/89b58ce4-2f11-477e-b4a9-19b01e5753bd)|
+|![메인(로그인O)](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/21356938-171d-4e0b-860a-18f6c4edfaa5)|![게시글 업로드, 수정](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/89b58ce4-2f11-477e-b4a9-19b01e5753bd)|
 
 |DM(Send)|DM(Receive)|
 |------|---|
