@@ -8,6 +8,11 @@
 - **Design은 [Figma](https://www.figma.com/design/mCmAmOJ9qTlCUNqiqd61mi/%EC%86%8C%EA%B3%B55%EC%A1%B0?node-id=0-1&t=vELf3T2FETVz6inP-0) 클릭!**
 - **시연영상은 [Youtube](https://www.youtube.com/watch?v=Ngt-Pe6oSyk) 클릭!**
 
+## 🎨실행방법
+1) **git clone**
+2) **pip install -r requirements.txt**
+3) **flask run**
+
 ## 화면 구성
 |Main|Login|
 |------|---|
@@ -20,11 +25,6 @@
 |DM(Send)|DM(Receive)|
 |------|---|
 |![DM send](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/7b30380c-0a6b-4a96-86fc-ee35ad540863)|![받은 메세지함](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/a05eca7a-2d7b-40a8-8dc2-58b27818fd6b)|
-
-## 🎨실행방법
-1) **git clone**
-2) **pip install -r requirements.txt**
-3) **flask run**
 
 ## ✨Team 5
 |<img src="https://avatars.githubusercontent.com/u/170405292?v=4" width="150" height="150"/>|<img src="https://avatars.githubusercontent.com/u/139524522?v=4" width="150" height="150"/>|
