@@ -13,7 +13,7 @@
 2) **pip install -r requirements.txt**
 3) **flask run**
 
-## 화면 구성
+## 🧾화면 구성
 |Main|Login|
 |------|---|
 |![메인(로그인X)](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/07a05dfa-f15a-48d6-b3ce-30a89a1f9e11)|![로그인](https://github.com/nan3ana3/Software_engineering_Team5/assets/170405292/fcce1524-6a26-44d9-ac20-5a19900b42a0)|
